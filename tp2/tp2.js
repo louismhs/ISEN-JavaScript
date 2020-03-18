@@ -171,3 +171,5 @@ function main(){
     //console.log(bank_money(12740928));
 }
 main();
+
+// It's a test Git.
