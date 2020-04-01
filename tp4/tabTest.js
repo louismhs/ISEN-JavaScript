@@ -25,4 +25,6 @@ function repeatTests(){
     console.log("------------------------------");
     mulTable();
     console.log("------------------------------");
+    let encrypted = chiffrementCesar("attaquez asterix", 3);
+    console.log(encrypted);
 }

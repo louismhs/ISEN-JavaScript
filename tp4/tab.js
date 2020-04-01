@@ -104,3 +104,41 @@ function printTab(tab){
     }
     console.log(string);
 }
+
+function chiffrementCesar(text, cle){
+    let size = text.length;
+    let number;
+    let encrypted = "";
+
+    cle = parseInt(cle);
+
+    for (let i = 0; i < size; i++){
+        number = text.charCodeAt(i);
+
+        if ((number >= 'A'.charCodeAt(0) && number <= 'Z'.charCodeAt(0)) || (number >= 'a'.charCodeAt(0) && number <= 'z'.charCodeAt(0))){
+            number += cle;
+            if(text[i] == text[i].toUpperCase()){
+                if(number > 'Z'.charCodeAt(0)){
+                    number -= 26;
+                }
+                if(number < 'A'.charCodeAt(0)){
+                    number += 26;
+                }
+            }
+            else{
+                if(number > 'z'.charCodeAt(0)){
+                    number -= 26;
+                }
+                if(number < 'a'.charCodeAt(0)){
+                    number += 26;
+                }
+            }
+            encrypted += String.fromCharCode(number);
+        }
+        else{
+            encrypted += text[i];
+        }
+    }
+
+    return encrypted;
+}
