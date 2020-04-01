@@ -56,3 +56,16 @@ function nbOccurences(wordList, word){
     }
     return occur;
 }
+
+function flatten2D(array){
+    let tab = [];
+    let size = array.length;
+
+    for (let i = 0; i < size; i++){
+
+        for (let j = 0; j <  array[i].length; j++){
+            tab.push(array[i][j]);
+        }
+    }
+    return tab;
+}
