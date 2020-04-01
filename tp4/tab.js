@@ -62,10 +62,45 @@ function flatten2D(array){
     let size = array.length;
 
     for (let i = 0; i < size; i++){
-
         for (let j = 0; j <  array[i].length; j++){
             tab.push(array[i][j]);
         }
     }
     return tab;
+}
+
+function displayAll(tableau){
+    return tableau;
+}
+
+function deleteLast(tableau){
+    tableau.pop();
+    return tableau;
+}
+
+function addLast(tableau, mot){
+    tableau.push(mot);
+    return tableau;
+}
+
+function mulTable(){
+    let tab = [];
+
+    for(let i = 0; i < 10; i++){
+        console.log("Table de multiplication de " + i + " :");
+        for (let j = 0; j < 10; j++){
+            tab[j] = i*j;
+        }
+        printTab(tab);
+        console.log(" ");
+    }
+}
+
+function printTab(tab){
+    let string = "";
+    for(let value of tab){
+        string += value;
+        string += " ";
+    }
+    console.log(string);
 }

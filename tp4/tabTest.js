@@ -17,5 +17,12 @@ function repeatTests(){
     console.log("------------------------------");
     console.log(flatten2D([[1,2], [3,4], [5,6]])); // [1, 2, 3, 4, 5, 6]
     console.log(flatten2D([[1,2], [3,4,5], [6]])); // [1, 2, 3, 4, 5, 6]
-
+    console.log("------------------------------");
+    let tab = ["Bob", "Julien", "Roger"];
+    console.log(displayAll(tab));           // => ["Bob", "Julien", "Roger"]
+    console.log(deleteLast(tab));           // => ["Bob", "Julien"]
+    console.log(addLast(tab, "Jules"));     // => ["Bob", "Julien", "Jules"]
+    console.log("------------------------------");
+    mulTable();
+    console.log("------------------------------");
 }
