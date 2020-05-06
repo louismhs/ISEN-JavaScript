@@ -7,3 +7,9 @@ td,th
     border: 1px solid black;
     text-align:center;
 }
+
+#e15
+{
+    font-size: 1.5rem;
+    color: red;
+}
