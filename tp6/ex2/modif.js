@@ -11,17 +11,6 @@ function main(){
     let note = document.querySelector("#e15").innerHTML;
     console.log("La note + 2 points de S5 de E1 : " + (parseInt(note) + 2));*/
 
-
-    let b = document.body;
-
-    let newP = document.createElement('p');
-    let newTexte = document.createTextNode('Texte écrit en JS');
-    newP.textContent = 'Ceci est un test!';
-
-    b.prepend(newP);
-    b.appendChild(newTexte);
-
-
     let b_bis = document.body;
     let title = document.createElement('p');
     title.textContent = "Titre de la page : " + document.title;
