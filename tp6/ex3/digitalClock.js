@@ -43,11 +43,17 @@ function init(){
 function main(){
 
     init();
-    updateDigit("#hours-tens", 1);
-    updateDigit("#hours-units", 2);
-    updateDigit("#minutes-tens", 3);
-    updateDigit("#minutes-units", 4);
+    setInterval(updateClock, 1000)
     
+}
+
+function updateClock(){
+
+    let hour = new Date();
+    updateDigit("#hours-tens",  parseInt(hour.getHours()/10));
+    updateDigit("#hours-units", parseInt(hour.getHours()%10));
+    updateDigit("#minutes-tens", parseInt(hour.getMinutes()/10));
+    updateDigit("#minutes-units", parseInt(hour.getMinutes()%10));
 }
 
 main();
